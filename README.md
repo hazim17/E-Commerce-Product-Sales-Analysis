@@ -1,43 +1,76 @@
 # E-Commerce Product Sales Analysis
 
 ## **Background Project**
-Analyze performance of product sales from various source of dataset.
+Analyze performance of product sales from various sources of dataset.
 
-## **Goals**
-Extract the data from multiple file to create a new table (Data mart). Then use that table to analyze product sales.
+## **Goals & Objective**
+ **1. ETL to Create a Data Mart**
+- Extract, transform, and load multiple olist datasets from CSV to a PostgreSQL database using Psycopg2 and DuckDB to create a data mart.
+- The data mart contains data from specific customer states, in this case, the highest order of customers, which is from SP (Sao Paulo).
 
-## **Objectives**
-Objectives of this project:
-- Import data from csv to PostgreSQL
-- Check Data Validation
-- Create Data Mart
-- Using Python, connect to PostgreSQL and Analyze product sales:
-  1. The most ordered product category (Top 3 Product product category) in the last 6 months
-  2. Total Sales and average monthly sales for each product category (In 2018)
+**2. Product Sales analysis**
+- Yearly and Monthly Trend Sales Analysis
+  - Revenue (Line Chart)
+- Top and Bottom Product Sales 
+  - Top 10 highest-sold products (Bar chart)
+  - Top 10 lowest-sold products (Bar chart)
+- Average order value (AOV)
+- Product Category bought together
 
 
 ## **Result**
-1. The most ordered product category (Top 3 Product product category) in the last 6 months
-Result: 
+1. Result ETL
+The data that needed for analysis is completed to load to a table
 <p align="center">
-<img src="/dataset_image/test_1.png" alt="test_1">
+<img src="/dataset_image/etl_result.png" alt="test_1">
 </p>
 
-2. Total Sales and average monthly sales for each product category (In 2018)
-Result: 
+2. Yearly and Monthly Trend Sales Analysis:
+<p> Yearly Trend Sales Analysis </p>
 <p align="center">
-<img src="/dataset_image/test_2.png" alt="test_2">
+<img src="/dataset_image/yearly_revenue.png" alt="test_1">
 </p>
 
+<p> Monthly Trend Sales Analysis </p>
+<p align="center">
+<img src="/dataset_image/monthly revenue.png" alt="test_1">
+</p>
+
+
+We can conclude that sales from the current year is increasing compared to previous year.
+
+3. Top and Bottom Product Sales:
+<p> Top 10 Product Sales</p>
+<p align="center">
+<img src="/dataset_image/top_10_product.png" alt="test_1">
+</p>
+
+<p>Bottom 10 Product Sales</p>
+<p align="center">
+<img src="/dataset_image/bottom_10_product.png" alt="test_1">
+</p>
+
+We can conclude that most of the customer bought our product about bath, beauty health and sport. And the least is about childrem cloth, music and games.
+
+4. Average order value
+<p align="center">
+<img src="/dataset_image/aov.png" alt="test_1">
+</p>
+Average order value of customer from Jan 2017 to Aug 2018 is around $140 - $160 
+
+5. Product Bought Together
+<p align="center">
+<img src="/dataset_image/prod_bundling.png" alt="test_1">
+</p>
+Most product of bath bed table and health beauty is bought more than 2.
 
 
 ## **This Repository Organization**
 ```
 _
- |── dataset_image                           	 : Contain all the data and image used in this project
-├── extract_transform_load.sql 	 : This file is used to create table, extract data and create data mart.
-├── product_sales_analysis.ipynb    : This file is used to analyze product category based on order and sales.
-└── README.md                  	 : Readme File
+|── dataset_image                            : Contain all the data and image used in this project
+├── ETL and Analysis of Product Sales.ipynb  : This file is used to create ETL and analyze product category based on order and sales.
+└── README.md                  	             : Readme File
 ```
 
 <!-- Shoutout to Grammarly for correcting the grammar.  -->
@@ -49,3 +82,4 @@ Muhammad Hazim M
 
 Pacmann - Analystics & Data Science
 Batch 14
+
