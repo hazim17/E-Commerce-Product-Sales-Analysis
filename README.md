@@ -1,76 +1,79 @@
 # E-Commerce Product Sales Analysis
 
 ## **Background Project**
-Analyze the performance of product sales from various sources of dataset.
+Analyze performance of product sales from various sources of dataset.
 
 ## **Goals & Objective**
- **1. ETL to Create a Data Mart**
-- Extract, transform, and load multiple olist datasets from CSV to a PostgreSQL database using Psycopg2 and DuckDB to create a data mart.
-- The data mart contains data from specific customer states, in this case, the highest order of customers, which is from SP (Sao Paulo).
+**A. ETL to Create a Data Mart**
+The Olist dataset includes several CSV files from various tables (e.g., customer, order_items, order_payments, orders, product) and this dataset also came from many cities in Brazil. To make it more efficient, a data mart will be created:
+- Extract, transform, and load multiple olist datasets from CSV to a PostgreSQL database using Psycopg2 and DuckDB.
+- The data mart will contain data from specific customer states, in this case, the highest order of customers, which is from São Paulo (SP).
 
-**2. Product Sales Analysis**
-- Yearly and Monthly Trend Sales Analysis
-  - Revenue (Line Chart)
-- Top and Bottom Product Sales 
-  - Top 10 highest-sold products (Bar chart)
-  - Top 10 lowest-sold products (Bar chart)
-- Average order value (AOV)
-- Product Category bought together
 
+**B. Product Sales analysis**
+1. Sales & Order Trend Analysis
+  * Sales & Order Growth Rate Yearly (2017 and 2018)
+  * Monthly Sales & Order Trend
+    
+2. Product Performance Analysis
+  * Top 10 highest-sold category (2017 and 2018)
+
+3. Average order value (AOV) 2017 and 2018
+* AOV for 2017 and 2018
+* Top 10 AOV from category product
 
 ## **Result**
 1. Result ETL
-The data that is needed for analysis is completed to load to a table
 <p align="center">
-<img src="/dataset_image/etl_result.jpg" alt="test_1">
+<img src="/dataset_image/1.result_etl.png" alt="test_1">
 </p>
 
-2. Yearly and Monthly Trend Sales Analysis:
-<p> Yearly Trend Sales Analysis </p>
+2. Sales & Orders Growth Rate Yearly (2017 and 2018) 
 <p align="center">
-<img src="/dataset_image/yearly_revenue.jpg" alt="test_1">
+<img src="/dataset_image/2.sales growth.png" alt="test_1">
 </p>
 
-<p> Monthly Trend Sales Analysis </p>
 <p align="center">
-<img src="/dataset_image/monthly revenue.jpg" alt="test_1">
+<img src="/dataset_image/3.order growth.png" alt="test_1">
+</p>
+3. Monthly Sales & Orders Trend
+<p align="center">
+<img src="/dataset_image/4.monthly sales.png" alt="test_1">
 </p>
 
-
-We can conclude that sales from the current year are increasing compared to the previous year.
-
-3. Top and Bottom Product Sales:
-<p> Top 10 Product Sales</p>
 <p align="center">
-<img src="/dataset_image/top_10_product.jpg" alt="test_1">
+<img src="/dataset_image/5.monthly orders.png" alt="test_1">
 </p>
 
-<p>Bottom 10 Product Sales</p>
+4. Growth of Category Sales and Orders From 2017 to 2018
 <p align="center">
-<img src="/dataset_image/bottom_10_product.jpg" alt="test_1">
+<img src="/dataset_image/8.Top 10 sales category Growth.png" alt="test_1">
 </p>
 
-We can conclude that most of the customer bought our product for baths, beauty health, and sport. And the least is about children's clothes, music and games.
-
-4. Average order value
 <p align="center">
-<img src="/dataset_image/aov.jpg" alt="test_1">
+<img src="/dataset_image/11.Top 10 orders category Growth.png" alt="test_1">
 </p>
-The average order value of customers from Jan 2017 to Aug 2018 is around $140 - $160 
 
-5. Product Bought Together
+5. Average Order Value (AOV) Comparison
 <p align="center">
-<img src="/dataset_image/prod_bundling.jpg" alt="test_1">
+<img src="/dataset_image/12. AOV yearly.png" alt="test_1">
 </p>
-Most products of baths bed tables and health beauty is bought more than 2.
+
+<p align="center">
+<img src="/dataset_image/16.Growth AOV product.png" alt="test_1">
+</p>
+
+## **Conclusion**
+- The stability in the top 10 sales categories from 2017 to 2018 indicates that existing customers are becoming more familiar with the platform. This increased brand recognition could facilitate repeat purchases and create opportunities for upselling or cross-selling.
+- It is important to assess the impact of these changes on overall profitability. While sales and orders have increased, the decrease in AOV and potential changes in profit margins should be carefully analyzed to ensure that profitability is also on an upward trend.
 
 
 ## **This Repository Organization**
 ```
 _
-|── dataset_image                            : Contain all the data and images used in this project
-├── ETL and Analysis of Product Sales.ipynb  : This file is used to create ETL and analyze product categories based on order and sales.
-└── README.md                  	             : Readme File
+|── dataset_image                           	       : Contain all the data and image used in this project
+├── ETL and Analysis of Product Sales in E-Commerce  : This file is used to ETL and analyze product category sales.
+└── README.md                                      	 : Readme File
 ```
 
 <!-- Shoutout to Grammarly for correcting the grammar.  -->
@@ -79,7 +82,3 @@ _
  -->
 
 Muhammad Hazim M
-
-Pacmann - Analytics & Data Science
-Batch 14
-
